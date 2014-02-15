@@ -1,2 +1,3 @@
+Python scripts for animations of pressure and velocity in a duct. The examples are taken from a book Active Control of Sound by P.A. Nelson & S.J. Elliott.
 
-Nice animations of sound waves 
+The scripts are named by chapter numbers. They are meant to be edited as some variations are commented out.
