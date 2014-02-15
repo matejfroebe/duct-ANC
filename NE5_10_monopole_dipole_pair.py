@@ -1,4 +1,9 @@
 
+"""
+We can also cancel sound with monopole/dipole pair and we get no
+unwanted reflections.
+"""
+
 from __future__ import division
 import numpy as np
 import duct

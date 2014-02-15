@@ -1,4 +1,13 @@
 
+"""
+Primary source represents unwanted noise and we use secondary sound source
+to cancel it. The problem is that the sound from primary source is reflected
+from sec. source.
+
+If we would try to measure sound from primary source with microphone,
+it would also pick the reflected sound and we couldn't calculate the right
+signal for secondary source.
+"""
 
 from __future__ import division
 import numpy as np
@@ -20,19 +29,19 @@ if 0:
     #L = waveLength
 
     q2 = -q1 * np.exp(-1j*k*L) # necessary for calculation
-    s1 = duct.MonopoleSource(position=1, generator=duct.SineGenerator(q1, freq))
-    s2 = duct.MonopoleSource(position=1+L, generator=duct.SineGenerator(q2, freq))
+    primSrc = duct.MonopoleSource(position=1, generator=duct.SineGenerator(q1, freq))
+    secSrc = duct.MonopoleSource(position=1+L, generator=duct.SineGenerator(q2, freq))
 
 
 # pulse
 else:
-    s1 = duct.MonopoleSource(position=3, generator=duct.PulseGenerator(amp=1, delay=0))
+    primSrc = duct.MonopoleSource(position=3, generator=duct.PulseGenerator(amp=1, delay=0))
     L = 2
     delay = L/duct.c0
-    s2 = duct.MonopoleSource(position=3+L, generator=duct.PulseGenerator(amp=-1, delay=delay))
+    secSrc = duct.MonopoleSource(position=3+L, generator=duct.PulseGenerator(amp=-1, delay=delay))
 
     
-duct.animate([s1, s2])
+duct.animate([primSrc, secSrc])
 
 
 

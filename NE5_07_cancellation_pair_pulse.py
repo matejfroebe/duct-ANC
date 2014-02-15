@@ -1,6 +1,9 @@
 
 """
-Ping pong from figure 5.15
+We can get rid of reflected sound, if we use two secondary sources.
+
+Primary source radiates two rectangular pulses with opposite amplitude.
+The result is ping pong pictured in figure 5.15 in the book.
 """
 
 from __future__ import division

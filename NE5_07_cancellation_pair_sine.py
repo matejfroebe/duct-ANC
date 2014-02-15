@@ -1,5 +1,6 @@
 
 """
+Again two secondary sources, this time with sine waves.
 """
 
 from __future__ import division

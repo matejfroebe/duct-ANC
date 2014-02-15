@@ -14,8 +14,6 @@ from copy import deepcopy
 c0 = 343  # speed of sound
 ro0 = 1.2 # air density
 
-xMax = 5
-
 
 class SineGenerator(object):
     def __init__(self, q, freq):
@@ -85,9 +83,11 @@ class DipoleSource(object):
 
        
 
-
+# range of x coordinate for plots is from 0 to xMax
+xMax = 5
 nPOINTS = 200  # number of points on x-axis
 SPEED = 1/4000 # slow down time
+
 
 def x2pnt(x):
     "transform x coordinate to points"
